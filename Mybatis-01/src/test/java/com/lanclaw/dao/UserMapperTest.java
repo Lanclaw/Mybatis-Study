@@ -48,7 +48,7 @@ public class UserMapperTest {
         SqlSession sqlSession = MybatisUtils.getSqlSession();
         UserMapper userDao = sqlSession.getMapper(UserMapper.class);
 
-        int res = userDao.addUser(new User(4, "haha", "1223"));
+        int res = userDao.addUser(new User(7, "haha", "1223"));
         System.out.println(res);
 
         sqlSession.commit();

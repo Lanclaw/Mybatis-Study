@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.UserMapper">
+<mapper namespace="com.lanclaw.dao.UserMapper">
 
     <resultMap id="UserMap" type="user">
 <!--        column是数据库里的，property是实体类中-->
@@ -20,19 +20,19 @@
         select * from mybatis.user where id = #{id}
     </select>
 
-    <insert id="addUser" parameterType="com.User">
-        insert into mybatis.user (id, name, pwd) values (#{id}, #{name}, #{pwd})
+    <insert id="addUser" parameterType="user">
+        insert into mybatis.user (id, name, pwd) values (#{id}, #{name}, #{password})
     </insert>
 
-    <update id="updateUser" parameterType="com.User">
-        update mybatis.user set name=#{name}, pwd=#{pwd} where id = #{id}
+    <update id="updateUser" parameterType="user">
+        update mybatis.user set name=#{name}, pwd=#{password} where id = #{id}
     </update>
 
     <delete id="deleteUser" parameterType="int">
         delete from mybatis.user where id = #{id}
     </delete>
 
-    <select id="getUserLike" resultType="com.User" parameterType="String">
+    <select id="getUserLike" resultType="com.lanclaw.pojo.User" parameterType="String">
         select * from user where name like "%"#{name}"%"
     </select>
 
