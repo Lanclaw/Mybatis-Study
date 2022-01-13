@@ -8,6 +8,10 @@
         <property name="password" value="4321"/>
     </properties>
 
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
     <typeAliases>
         <package name="com.lanclaw.pojo"/>
     </typeAliases>

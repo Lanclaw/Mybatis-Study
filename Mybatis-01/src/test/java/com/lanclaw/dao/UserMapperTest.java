@@ -2,12 +2,17 @@ package com.lanclaw.dao;
 
 import com.lanclaw.pojo.User;
 import com.lanclaw.utils.MybatisUtils;
+import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
+import org.apache.log4j.Logger;
 import org.junit.Test;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class UserMapperTest {
+
+    static Logger logger = Logger.getLogger(UserMapperTest.class);
 
     @Test
     public void test(){
@@ -15,6 +20,7 @@ public class UserMapperTest {
         //1. 获得sqlSession对象
         SqlSession sqlSession = MybatisUtils.getSqlSession();
         //2. 执行sql
+        logger.info("execute sql");
         UserMapper userDao = sqlSession.getMapper(UserMapper.class);
         List<User> userList = userDao.getUserList();
 
@@ -81,6 +87,45 @@ public class UserMapperTest {
         List<User> users = userDao.getUserLike("张");
 
         for (User user : users) {
+            System.out.println(user);
+        }
+
+        sqlSession.close();
+    }
+
+    @Test
+    public void testLog4j(){
+        logger.info("info: log4j");
+        logger.debug("debug");
+        logger.error("error");
+    }
+
+    @Test
+    public void getUserByLimit(){
+        SqlSession sqlSession = MybatisUtils.getSqlSession();
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("startIndex", 1);
+        map.put("pageSize", 2);
+
+        List<User> userList = mapper.getUserByLimit(map);
+        for (User user : userList) {
+            System.out.println(user);
+        }
+
+        sqlSession.close();
+    }
+
+    @Test
+    public void getUserByRowBounds(){
+        SqlSession sqlSession = MybatisUtils.getSqlSession();
+
+        RowBounds rowBounds = new RowBounds(1, 2);
+
+        List<User> userList = sqlSession.selectList("com.lanclaw.dao.UserMapper.getUserByRowBounds", null, rowBounds);
+
+        for (User user : userList) {
             System.out.println(user);
         }
 

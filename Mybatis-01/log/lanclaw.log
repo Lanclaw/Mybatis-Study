@@ -1,0 +1,11 @@
+[INFO][22-01-13][com.lanclaw.dao.UserMapperTest]info: log4j
+[DEBUG][22-01-13][com.lanclaw.dao.UserMapperTest]debug
+[ERROR][22-01-13][com.lanclaw.dao.UserMapperTest]error
+[DEBUG][22-01-13][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[INFO][22-01-13][com.lanclaw.dao.UserMapperTest]execute sql
+[DEBUG][22-01-13][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[INFO][22-01-13][com.lanclaw.dao.UserMapperTest]execute sql
+[DEBUG][22-01-13][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][22-01-13][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][22-01-13][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][22-01-13][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.

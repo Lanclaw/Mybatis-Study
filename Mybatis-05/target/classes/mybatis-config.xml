@@ -29,6 +29,6 @@
     </environments>
 
     <mappers>
-        <mapper resource="com/lanclaw/dao/UserMapper.xml"/>
+        <mapper class="com.lanclaw.dao.UserMapper"/>
     </mappers>
 </configuration>
