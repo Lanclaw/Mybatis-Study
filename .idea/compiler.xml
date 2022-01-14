@@ -11,6 +11,8 @@
         <module name="Mybatis-07" />
         <module name="Mybatis-06" />
         <module name="Mybatis-01" />
+        <module name="Mybatis-09" />
+        <module name="Mybatis-08" />
       </profile>
     </annotationProcessing>
   </component>

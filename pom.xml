@@ -14,6 +14,8 @@
         <module>Mybatis-05</module>
         <module>Mybatis-06</module>
         <module>Mybatis-07</module>
+        <module>Mybatis-08</module>
+        <module>Mybatis-09</module>
     </modules>
 
     <dependencies>
